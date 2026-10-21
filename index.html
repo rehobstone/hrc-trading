@@ -139,6 +139,19 @@ img{display:block;max-width:100%}
 .doc-list li span:first-child{color:var(--gold);font-family:'Fraunces',serif;font-size:12px;letter-spacing:.1em;min-width:26px}
 .doc-list li span:last-child{color:rgba(255,255,255,.5);font-size:12.5px;display:block;margin-top:2px}
 
+/* leadership */
+.leadership{background:var(--ash-2)}
+.lead-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.leader{background:#fff;border:1px solid var(--line-dark);border-radius:8px;padding:34px 32px;display:flex;gap:22px;align-items:flex-start;transition:.25s}
+.leader:hover{border-color:rgba(198,161,91,.55);box-shadow:0 16px 40px rgba(8,26,43,.07)}
+.mono{width:58px;height:58px;border-radius:50%;background:var(--navy);color:var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-size:19px;letter-spacing:.04em;flex-shrink:0}
+.leader .role{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#8A6F3E;font-weight:600;display:block;margin-bottom:7px}
+.leader h3{font-size:19px;font-weight:600;margin-bottom:4px}
+.leader .org{font-size:12.5px;color:var(--muted);display:block;margin-bottom:14px}
+.leader a{font-size:13.5px;color:var(--ink);text-decoration:none;border-bottom:1px solid rgba(198,161,91,.5);padding-bottom:1px}
+.leader a:hover{color:#8A6F3E}
+.leader .line{display:block;font-size:12px;color:var(--muted);margin-top:8px}
+
 /* contact */
 .contact{background:var(--ash)}
 .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px}
@@ -212,6 +225,27 @@ img{display:block;max-width:100%}
   .reveal{opacity:1;transform:none;transition:none}
 }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "HRC Trading Limited",
+  "description": "Mining, commodity trading, and the export and import of solid minerals and general goods.",
+  "url": "https://rehobstone.github.io/hrc-trading/",
+  "email": "hrctrading@yahoo.com",
+  "telephone": "+2347069197486",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "House 3A, 1st Avenue, Graceland Estate, Karsana South District",
+    "addressLocality": "Gwarimpa Extension, Abuja",
+    "addressCountry": "NG"
+  },
+  "employee": [
+    {"@type": "Person", "name": "Ahuruonye Chinonyerem Nancy", "jobTitle": "Chief Executive Officer", "telephone": "+2347069197486"},
+    {"@type": "Person", "name": "Fang Shaohong", "jobTitle": "Managing Director", "telephone": "+2348068790878"}
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -226,6 +260,7 @@ img{display:block;max-width:100%}
       <a href="#capabilities">Capabilities</a>
       <a href="#commodities">Commodities</a>
       <a href="#process">Process</a>
+      <a href="#leadership">Leadership</a>
       <a href="#standards">Standards</a>
       <a href="#contact" class="nav-cta">Request a quotation</a>
     </nav>
@@ -399,6 +434,37 @@ img{display:block;max-width:100%}
   </div>
 </section>
 
+<section class="section leadership" id="leadership">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="tag">Leadership</span><h2>The people accountable for your cargo.</h2></div>
+      <p>Commercial and operational responsibility sits with named principals — not an anonymous desk. You deal directly with the people who sign off on your transaction.</p>
+    </div>
+    <div class="lead-grid">
+      <div class="leader reveal">
+        <div class="mono">AC</div>
+        <div>
+          <span class="role">Chief Executive Officer</span>
+          <h3>Ahuruonye Chinonyerem Nancy</h3>
+          <span class="org">HRC Trading Limited</span>
+          <a href="tel:+2347069197486">+234 706 919 7486</a>
+          <span class="line">Corporate strategy, trade partnerships and commercial approvals.</span>
+        </div>
+      </div>
+      <div class="leader reveal">
+        <div class="mono">FS</div>
+        <div>
+          <span class="role">Managing Director</span>
+          <h3>Fang Shaohong</h3>
+          <span class="org">HRC Trading Limited</span>
+          <a href="tel:+2348068790878">+234 806 879 0878</a>
+          <span class="line">Operations, supply chain and international buyer relationships.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="section standards" id="standards">
   <div class="wrap">
     <div class="standards-grid">
@@ -429,7 +495,8 @@ img{display:block;max-width:100%}
         <h2>Tell us what you need moved.</h2>
         <p class="intro">Send your mineral or goods requirement with grade, volume and destination. We respond to commercial enquiries within one business day.</p>
         <div class="detail"><div class="k">Office</div><div class="v">House 3A, 1st Avenue, Graceland Estate,<br>Karsana South District, Gwarimpa Extension,<br>Abuja, Nigeria</div></div>
-        <div class="detail"><div class="k">Enquiries</div><div class="v">Use the form — it reaches our commercial desk directly.</div></div>
+        <div class="detail"><div class="k">Email</div><div class="v"><a href="mailto:hrctrading@yahoo.com">hrctrading@yahoo.com</a></div></div>
+        <div class="detail"><div class="k">Phone</div><div class="v"><a href="tel:+2347069197486">+234 706 919 7486</a><br><a href="tel:+2348068790878">+234 806 879 0878</a></div></div>
         <div class="detail"><div class="k">Hours</div><div class="v">Monday – Friday, 09:00 – 17:00 WAT</div></div>
       </div>
 
@@ -478,6 +545,8 @@ img{display:block;max-width:100%}
         <span class="brand-text"><b>HRC</b><span>TRADING LIMITED</span></span>
       </a>
       <p>Mining, commodity trading, and the export and import of solid minerals and general goods. Abuja, Nigeria.</p>
+      <p style="margin-top:12px"><a href="mailto:hrctrading@yahoo.com" style="color:var(--gold-soft);text-decoration:none">hrctrading@yahoo.com</a><br>
+      <a href="tel:+2347069197486" style="color:rgba(255,255,255,.62);text-decoration:none">+234 706 919 7486</a> · <a href="tel:+2348068790878" style="color:rgba(255,255,255,.62);text-decoration:none">+234 806 879 0878</a></p>
     </div>
     <div>
       <h5>Company</h5>
@@ -485,6 +554,7 @@ img{display:block;max-width:100%}
         <li><a href="#about">About</a></li>
         <li><a href="#capabilities">Capabilities</a></li>
         <li><a href="#commodities">Commodities</a></li>
+        <li><a href="#leadership">Leadership</a></li>
         <li><a href="#standards">Standards</a></li>
       </ul>
     </div>
