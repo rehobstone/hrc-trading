@@ -437,6 +437,9 @@ img{display:block;max-width:100%}
         <h3>Request a quotation</h3>
         <p class="sub">All fields marked required help us quote accurately.</p>
         <form id="enquiryForm" novalidate>
+          <input type="hidden" name="_subject" value="HRC Trading — new quotation enquiry">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
           <div class="row2">
             <div class="field"><label for="name">Full name</label><input id="name" name="name" type="text" required autocomplete="name"></div>
             <div class="field"><label for="company">Company</label><input id="company" name="company" type="text" autocomplete="organization"></div>
@@ -539,18 +542,16 @@ form.addEventListener('submit', async function(e){
   if(!form.name.value.trim() || !form.email.value.trim() || !form.message.value.trim()){
     say('Please complete your name, email and requirement.', false); return;
   }
-  var data = Object.fromEntries(new FormData(form).entries());
-  data._subject = 'HRC Trading enquiry — ' + (data.company || data.name || 'website');
-  data._template = 'table';
-  data._captcha = 'false';
+  var fd = new FormData(form);
+  fd.append('_subject', 'HRC Trading enquiry — ' + ((fd.get('company') || fd.get('name') || 'website')));
 
   btn.disabled = true; var label = btn.textContent; btn.textContent = 'Sending…';
   say('Sending your enquiry…', true);
   try{
     var res = await fetch(FORM_ENDPOINT, {
       method:'POST',
-      headers:{'Content-Type':'application/json','Accept':'application/json'},
-      body: JSON.stringify(data)
+      headers:{'Accept':'application/json'},
+      body: fd
     });
     var out = await res.json();
     if(res.ok && out.success !== 'false'){
